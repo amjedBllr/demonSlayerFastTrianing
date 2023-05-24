@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+    --tanjiro-color:#c20000;
+    --zenitsu-color:#f2aa52;
+    --muichiro-color:#76D1BB;
+    --inoske-color:#61A4F3;
+
+}
+
+/* pretty much ordered similarly to the page */
+
+body{
+    overflow-x: hidden;
+}
+#theThing{
+    display: flex;
+    aspect-ratio: 1920/102;
+}
+header{
+    margin-top: 6em;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10em;
+}
+.headerActive{
+    display: flex;
+}
+.quote p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    animation: slide 8s infinite ease-in-out;
+    animation-timing-function: linear;
+}
+/*just try to make the 0% and 100% translateY looks the same lol */
+@keyframes slide {
+    0%{
+        transform: translateY(0%);
+        
+    }
+    100%{
+        transform: translateY(-800%); 
+    }
+}
+header section p:nth-child(even){
+    color: white;
+    -webkit-text-stroke: 2px black;
+    transform: translateX(5em);
+}
+#muichiro section p:nth-child(4n){
+    -webkit-text-stroke-color:var(--muichiro-color);
+}
+#inoske section p:nth-child(4n){
+    -webkit-text-stroke-color:var(--inoske-color);
+}
+#zenitsu section p:nth-child(4n){
+    -webkit-text-stroke-color:var(--zenitsu-color);
+}
+#tanjiro section p:nth-child(4n){
+    -webkit-text-stroke-color:var(--tanjiro-color);
+}
+
+.quote{
+    width: 45%;
+    aspect-ratio: 897/830;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    overflow: hidden;
+}
+
+.portrait{
+    position: relative;
+    width: 50%;
+    aspect-ratio: 897/669;
+    display: flex;
+    justify-content: center;
+}
+.portrait img{
+    position: absolute;
+    object-fit: contain;
+    width: 33.333333333%;
+}
+.firstSlice{
+    left:0;
+    bottom: 0;
+    animation: float1 8s infinite ease-in-out ;
+    animation-timing-function: linear;
+}
+.secondSlice{
+    top: 12.5%;
+    animation: float2 8s infinite ease-in-out ;
+    animation-timing-function: linear;
+}
+.thirdSlice{
+    right: 0;
+    top: 0;
+    animation: float3 8s infinite ease-in-out ;
+    animation-timing-function: linear;
+}
+@keyframes float1{
+    
+    25%{
+        transform: translateY(2%);
+    }
+    75%{
+        transform: translateY(-4%);
+    }
+    
+}
+@keyframes float2{
+    
+    25%{
+        transform: translateY(-3%);
+    }
+    75%{
+        transform: translateY(3%);
+    }
+    
+}
+@keyframes float3{
+    
+    40%{
+        transform: translateY(4%);
+    }
+    90%{
+        transform: translateY(-2%);
+    }
+    
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8em;
+}
+ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+li{
+    aspect-ratio: 1;
+    width: 5%;
+    border-radius: 100%;
+    list-style-type: none;
+    cursor:pointer;
+}
+
+li:nth-child(1){
+    background-color: var(--tanjiro-color);
+}
+li:nth-child(2){
+    background-color: var(--zenitsu-color);
+}
+li:nth-child(3){
+    background-color: var(--muichiro-color);
+}
+li:nth-child(4){
+    background-color: var(--inoske-color);
+}
+
+@keyframes buttonFloat {
+    25%{
+        transform: translateY(4em);
+    }
+    75%{
+        transform: translateY(4em);
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 6em;
+}
+footer img{
+    width: 1.7em;
+}
+@media only screen and (max-width:1250px){
+    .quote p{
+        font-size: 3em;
+        animation: slide 10s infinite ease-in-out;
+        animation-timing-function: linear;
+    }
+    li{
+        width: 7%;
+    }
+}
+@media only screen and (max-width:950px){
+    .quote p{
+        font-size: 2.5em;
+        animation: slide 10s infinite ease-in-out;
+        animation-timing-function: linear;
+    }
+}
+@media only screen and (max-width:780px){
+    header{
+        flex-direction:column-reverse;
+        gap: 5em;
+        justify-content: center;
+    }
+    .quote{
+        width:90%;
+        align-items: center;
+    }
+    .portrait{
+        width: 90%;
+    }
+    .quote p{
+        font-size: 3.3em;
+        animation: slide 10s infinite ease-in-out;
+        animation-timing-function: linear;
+    }
+    li{
+        width: 11%;
+    }
+}
+@media only screen and (max-width:470px){
+    .quote p{
+        font-size: 2.4em;
+        animation: slide 10s infinite ease-in-out;
+        animation-timing-function: linear;
+    }
+}

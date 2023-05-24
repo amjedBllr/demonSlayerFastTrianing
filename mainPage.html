@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mainPage.css">
+</head>
+<body>
+    <main>
+        <div id="theThing">
+            <img src="images/navBar.png">
+        </div>
+        <header id="tanjiro" class="a headerActive">
+            <section class="quote">
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    <p>work harder</p>
+                    
+            </section>
+            <section class="portrait">
+                <img class="firstSlice" src="images/tan3.png">
+                <img class="secondSlice" src="images/tan2.png">
+                <img class="thirdSlice" src="images/tan1.png">
+            </section>
+        </header>
+        <header id="zenitsu" class="a">
+            <section class="quote">
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    <p>work faster</p>
+                    
+            </section>
+            <section class="portrait">
+                <img class="firstSlice" src="images/zeni1.png">
+                <img class="secondSlice" src="images/zeni2.png">
+                <img class="thirdSlice" src="images/zeni3.png">
+            </section>
+        </header>
+        <header id="muichiro" class="a">
+            <section class="quote">
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                    <p>work smarter</p>
+                   
+            </section>
+            <section class="portrait">
+                <img class="firstSlice" src="images/muio3.png">
+                <img class="secondSlice" src="images/muio2.png">
+                <img class="thirdSlice" src="images/muio1.png">
+            </section>
+        </header>
+        <header id="inoske" class="a">
+            <section class="quote">
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+                    <p>work stronger</p>
+            </section>
+            <section class="portrait">
+                <img class="firstSlice" src="images/inoske1.png">
+                <img class="secondSlice" src="images/inoske2.png">
+                <img class="thirdSlice" src="images/inoske3.png">
+            </section>
+        </header>
+        
+        <nav>
+            <ul>
+                <li onclick="changeYo('tanjiro')"></li>
+                <li onclick="changeYo('zenitsu')"></li>
+                <li onclick="changeYo('muichiro')"></li>
+                <li onclick="changeYo('inoske')"></li>
+            </ul>
+        </nav>
+        <footer>
+            <a href="https://www.instagram.com/bllr.dev" target="_blank"><img src="images/instagram (1).png"></a>
+            <a href="https://www.facebook.com/amjed.bellir/" target="_blank"><img src="images/facebook (1).png"></a>
+            <a href="https://discord.com/channels/1063184438965584012/1063184439666020414" target="_blank"><img src="images/discord.png"></a>
+        </footer>
+        <div id="theThing">
+            <img src="images/downBar.png">
+        </div>
+    </main>
+    <script>
+        let headers=document.getElementsByTagName('header');
+        function changeYo(name){
+            for(header of headers){
+                header.classList.remove("headerActive");
+            }
+            let toactive =document.getElementById(name);
+            toactive.classList.add("headerActive");
+        }
+
+    </script>
+</body>
+</html>
